@@ -39,7 +39,7 @@ sudo apt update
 sudo apt upgrade
 ```
 ## 2. Install ROS2 Humble
-Follow `https://docs.ros.org/en/humble/Installation.html`
+Follow https://docs.ros.org/en/humble/Installation.html
 ## 3. Initialize ROS2 workspace
 ```
 mkdir -p ~/ros2_ws/src
