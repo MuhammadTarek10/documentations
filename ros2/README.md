@@ -66,7 +66,7 @@ sudo apt install python3-colcon-common-extensions
 ```
 source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
 ```
-## 9. Build package
+## 9. Build package 
 If you get warnings -> install pip3 and run `pip3 install setuptools==58.2.0`
 ```
 colcon build --symlink-install
