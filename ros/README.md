@@ -1,8 +1,6 @@
 # Documentations
 ## 1. [ROS Noetic](https://docs.ros.org/en/noetic/Installation/Ubuntu.html)
 ## 2. [TurtleBot3](http://emanual.robotis.com/docs/en/platform/turtlebot3/overview/)
-## 3. [SLAM](http://emanual.robotis.com/docs/en/platform/turtlebot3/slam/)
-## 4. [Navigation](http://emanual.robotis.com/docs/en/platform/turtlebot3/navigation/)
 # Install ROS Noetic
 ## 1. Update apt
 ```bash
@@ -24,14 +22,13 @@ sudo apt install ros-noetic-desktop-full
 # Start with TurtleBot3
 ## 1. Make workspace
 ```bash
-mkdir -p ~/catkin_ws/src
-cd ~/catkin_ws/src
-```
-## 2. Clone the repository
-```bash
+mkdir -p ~/ws/src
+cd ~/ws/src
 git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3.git
 git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
 git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+cd ~/ws
+catkin_make
 ```
 # SLAM
 ## 1. Install dependencies
@@ -55,3 +52,32 @@ rosrun map_server map_saver -f ~/map
 sudo apt-get install ros-noetic-navigation
 sudo apt-get install ros-noetic-move-base
 ```
+## 2. Launch
+```bash
+roslaunch turtlebot3_gazebo turtlebot3_world.launch
+roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/map.yaml
+```
+# OpenManipulator X
+## 1. Installation
+```bash
+cd ~/ws/src
+git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_manipulation.git
+git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_manipulation_simulations.git
+git clone -b noetic-devel https://github.com/ROBOTIS-GIT/open_manipulator_dependencies.git
+sudo apt install ros-noetic-ros-control* ros-noetic-control* ros-noetic-moveit*
+cd ~/ws
+catkin_make
+```
+## 2. Launch
+```bash
+roslaunch turtlebot3_manipulation_gazebo turtlebot3_manipulation_world.launch
+roslaunch turtlebot3_manipulation_moveit_config move_group.launch
+roslaunch turtlebot3_manipulation_moveit_config moveit_rviz.launch config:=true
+```
+# OpenCR
+## 1. Install dependencies
+```bash
+sudo apt-get install ros-noetic-rosserial-arduino
+sudo apt-get install ros-noetic-rosserial
+```
+## 2. Install OpenCR
