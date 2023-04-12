@@ -44,6 +44,7 @@ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 ```
 ## 3. Save Map
 ```bash
+sudo apt update
 sudo apt-get install ros-noetic-map-server
 rosrun map_server map_saver -f ~/map
 ```
@@ -60,6 +61,13 @@ roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/map
 ```
 # OpenManipulator X
 ## 1. Installation
+### Note
+if you encounter errors during install ros-control...\
+```bash
+sudo dpkg -i --force-overwrite /var/cache/apt/archives/ros-noetic-moveit-task-constructor-core_0.1.1-1focal.20230216.033022_amd64.deb
+sudo apt -f install
+sudo apt update & sudo apt upgrade
+```
 ```bash
 cd ~/ws/src
 git clone https://github.com/ROBOTIS-GIT/turtlebot3_manipulation.git
