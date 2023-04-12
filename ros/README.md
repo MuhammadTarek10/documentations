@@ -17,6 +17,7 @@ curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo ap
 ```
 ## 4. Installation
 ```bash
+sudo apt update
 sudo apt install ros-noetic-desktop-full
 ```
 # Start with TurtleBot3
@@ -61,9 +62,9 @@ roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/map
 ## 1. Installation
 ```bash
 cd ~/ws/src
-git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_manipulation.git
-git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_manipulation_simulations.git
-git clone -b noetic-devel https://github.com/ROBOTIS-GIT/open_manipulator_dependencies.git
+git clone https://github.com/ROBOTIS-GIT/turtlebot3_manipulation.git
+git clone https://github.com/ROBOTIS-GIT/turtlebot3_manipulation_simulations.git
+git clone https://github.com/ROBOTIS-GIT/open_manipulator_dependencies.git
 sudo apt install ros-noetic-ros-control* ros-noetic-control* ros-noetic-moveit*
 cd ~/ws
 catkin_make
