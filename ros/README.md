@@ -21,6 +21,7 @@ sudo apt update
 sudo apt install ros-noetic-desktop-full
 ```
 # Start with TurtleBot3
+### Note: Make sure to make ```export TURTLEBOT3_MODEL=waffle_pi``` or any other model before anything
 ## 1. Make workspace
 ```bash
 mkdir -p ~/ws/src
