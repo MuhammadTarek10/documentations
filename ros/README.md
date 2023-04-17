@@ -62,13 +62,6 @@ roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/map
 ```
 # OpenManipulator X
 ## 1. Installation
-### Note
-if you encounter errors during install ros-control...\
-```bash
-sudo dpkg -i --force-overwrite /var/cache/apt/archives/ros-noetic-moveit-task-constructor-core_0.1.1-1focal.20230216.033022_amd64.deb
-sudo apt -f install
-sudo apt update & sudo apt upgrade
-```
 ```bash
 cd ~/ws/src
 git clone https://github.com/ROBOTIS-GIT/turtlebot3_manipulation.git
@@ -77,6 +70,13 @@ git clone https://github.com/ROBOTIS-GIT/open_manipulator_dependencies.git
 sudo apt install ros-noetic-ros-control* ros-noetic-control* ros-noetic-moveit*
 cd ~/ws
 catkin_make
+```
+### Note
+if you encounter errors during install ros-control...
+```bash
+sudo dpkg -i --force-overwrite /var/cache/apt/archives/ros-noetic-moveit-task-constructor-core_0.1.1-1focal.20230216.033022_amd64.deb
+sudo apt -f install
+sudo apt update & sudo apt upgrade
 ```
 ## 2. Launch
 ```bash
