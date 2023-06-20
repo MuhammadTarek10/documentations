@@ -4,13 +4,16 @@ brew install mysql
 ```
 # Starting MySql
 ```
+brew services start mysql
 mysql.server start
 ```
 # Stopping MySql
 ```
+brew services stop mysql
 mysql.server stop
 ```
 # Creating a database
+Note: password initially is ```root```
 ```
 mysql -u root -p
 ```
