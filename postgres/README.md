@@ -3,6 +3,7 @@
 brew install postgres
 ```
 # Starting Postgres
+Note: you may want to change it to ```postgresql@14```
 ```
 brew services start postgres
 ```
