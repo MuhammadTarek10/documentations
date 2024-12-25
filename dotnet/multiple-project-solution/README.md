@@ -41,7 +41,7 @@ dotnet run -p <project-filename>
 - Add reference to the project
 
 ```bash
-dotnet add <project-name> reference <project-name>
+dotnet add <project-name> reference <project-filename>
 ```
 
 for EG.
