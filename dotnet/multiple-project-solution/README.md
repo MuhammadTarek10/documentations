@@ -35,7 +35,7 @@ dotnet build
 - To run the project
 
 ```bash
-dotnet run -p <project-filename>
+dotnet run --project <project-filename>
 ```
 
 - Add reference to the project
