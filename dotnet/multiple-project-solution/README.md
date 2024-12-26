@@ -65,5 +65,5 @@ dotnet sln remove <project-name>
 - To add package to specefic project
 
 ```bash
-dotnet add <project-filename> package <package-name>
+dotnet add <project-name> package <package-name>
 ```
