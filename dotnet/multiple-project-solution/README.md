@@ -1,5 +1,3 @@
-# Notes
-
 Making multiple project solution using dotnet cli
 
 1. Create a new solution
@@ -66,4 +64,18 @@ dotnet sln remove <project-name>
 
 ```bash
 dotnet add <project-name> package <package-name>
+```
+
+# Working with Entity Framework Core
+
+1. Make migrations for the project
+
+```bash
+dotnet ef migrations add <migration-name> --project <project-name(Infrastructure)> --startup-project <project-name(Client)>
+```
+
+2. Update the database
+
+```bash
+dotnet ef database update --project <project-name(Infrastructure)> --startup-project <project-name(Client)>
 ```
